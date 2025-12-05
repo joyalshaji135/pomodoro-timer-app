@@ -1,50 +1,285 @@
-# Welcome to your Expo app 👋
+# Pomodoro Timer App 🍅
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A beautiful and functional Pomodoro timer application built with React Native and Expo. Stay focused, track your work sessions, and boost productivity with this elegant timer app.
 
-## Get started
+![Pomodoro Timer App](https://img.shields.io/badge/React%20Native-0.74.3-blue)
+![Expo](https://img.shields.io/badge/Expo-51.0.0-purple)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue)
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
-   npm install
-   ```
+### ⏱️ **Core Timer Features**
+- **Focus Timer**: 25-minute focus sessions (customizable)
+- **Short Breaks**: 5-minute breaks between sessions
+- **Long Breaks**: 15-minute breaks after 4 sessions
+- **Interval Tracking**: Visual progress through work sessions
+- **Task Management**: Track what you're working on
 
-2. Start the app
+### 🎨 **UI/UX Features**
+- **Dark/Light Mode**: Automatic theme switching
+- **Beautiful Animations**: Smooth timer transitions
+- **Visual Progress**: Circular timer with visual feedback
+- **Interval Indicators**: Visual session tracking
 
-   ```bash
-   npx expo start
-   ```
+### ⚙️ **Customization**
+- Adjustable timer durations
+- Configurable number of intervals
+- Theme preferences
+- Task-specific timers
 
-In the output, you'll find options to open the app in a
+## 📱 Screenshots
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Splash Screen | Timer Screen | Settings |
+|--------------|--------------|----------|
+| ![Splash](https://via.placeholder.com/300x600/FF6B6B/FFFFFF?text=Pomodoro+Timer) | ![Timer](https://via.placeholder.com/300x600/4ECDC4/FFFFFF?text=Focus+Time) | ![Settings](https://via.placeholder.com/300x600/121212/FFFFFF?text=Settings) |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Quick Start
 
-## Get a fresh project
+### Prerequisites
+- Node.js (18.x or higher)
+- npm or yarn
+- Expo Go app on your mobile device
 
-When you're ready, run:
+### Installation
 
+1. **Clone the repository**
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/PomodoroTimerApp.git
+cd PomodoroTimerApp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-## Learn more
+3. **Start the development server**
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. **Run on your device**
+   - Install **Expo Go** from App Store/Play Store
+   - Scan the QR code with Expo Go app
+   - Make sure your phone and computer are on the same network
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📁 Project Structure
 
-## Join the community
+```
+PomodoroTimerApp/
+├── app/                    # App screens and navigation
+│   ├── (tabs)/            # Tab-based navigation
+│   │   ├── index.tsx      # Home/Timer screen
+│   │   └── settings.tsx   # Settings screen
+│   ├── splash.tsx         # Splash/logo screen
+│   └── _layout.tsx        # Root layout
+├── assets/                # Images, fonts, icons
+├── components/            # Reusable components
+│   ├── PomodoroTimer.tsx  # Main timer component
+│   ├── TimerControls.tsx  # Timer control buttons
+│   ├── TaskInput.tsx      # Task input field
+│   ├── IntervalCircles.tsx # Interval visualization
+│   ├── themed-text.tsx    # Themed text component
+│   └── themed-view.tsx    # Themed view component
+├── constants/             # Constants and themes
+│   ├── Colors.ts          # Color palette
+│   └── Theme.ts           # Theme configuration
+├── hooks/                 # Custom React hooks
+│   ├── useThemeColor.ts   # Theme hook
+│   └── useTimer.ts        # Timer logic hook
+└── scripts/              # Build scripts
+```
 
-Join our community of developers creating universal apps.
+## 🛠️ Building for Production
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Android APK
+```bash
+# Build development APK
+eas build --platform android --profile development
+
+# Build production APK
+eas build --platform android --profile production
+```
+
+### iOS
+```bash
+# Build for iOS (requires Apple Developer account)
+eas build --platform ios --profile development
+```
+
+## 🎯 Usage Guide
+
+### Starting a Pomodoro Session
+1. Open the app
+2. Enter your task in the input field
+3. Tap the play button to start the timer
+4. Focus for 25 minutes
+5. Take a 5-minute break when timer ends
+6. Repeat for 4 sessions, then take a 15-minute break
+
+### Customizing Timer Settings
+1. Go to Settings tab
+2. Adjust:
+   - Focus Time (minutes)
+   - Short Break (minutes)
+   - Long Break (minutes)
+   - Number of intervals
+   - Dark/Light mode
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env` file in the root directory:
+```env
+EXPO_PUBLIC_API_URL=your_api_url
+# Add other environment variables as needed
+```
+
+### Customizing Colors
+Edit `constants/Colors.ts` to change the color scheme:
+```typescript
+export const Colors = {
+  light: {
+    primary: '#FF6B6B',    // Main accent color
+    secondary: '#4ECDC4',  // Secondary color
+    background: '#FFFFFF', // Background color
+    // ... other colors
+  },
+  dark: {
+    // Dark theme colors
+  }
+};
+```
+
+## 📦 Dependencies
+
+### Core Dependencies
+- `expo`: 51.0.0
+- `react-native`: 0.74.3
+- `react`: 18.2.0
+- `expo-router`: File-based navigation
+- `@expo/vector-icons`: Icon library
+
+### Development Dependencies
+- TypeScript for type safety
+- Expo CLI for development
+- EAS CLI for building
+
+## 🧪 Testing
+
+### Running Tests
+```bash
+# Run unit tests
+npm test
+
+# Run with coverage
+npm test -- --coverage
+```
+
+### Testing on Different Devices
+- **Android**: Use Expo Go or build APK
+- **iOS**: Use Expo Go (requires macOS for simulator)
+- **Web**: Run `npx expo start --web`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Code Style
+- Follow TypeScript best practices
+- Use functional components with hooks
+- Maintain consistent naming conventions
+- Add comments for complex logic
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Issue**: App won't load on phone
+**Solution**: 
+- Ensure phone and computer are on same Wi-Fi
+- Use `npx expo start --tunnel` for network issues
+- Clear cache: `npx expo start --clear`
+
+**Issue**: Build fails
+**Solution**:
+- Update dependencies: `npx expo upgrade`
+- Check for missing packages: `npm install`
+- Clear build cache
+
+**Issue**: Icons not showing
+**Solution**:
+- Ensure `@expo/vector-icons` is installed
+- Check icon names in the documentation
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Pomodoro Technique](https://francescocirillo.com/pages/pomodoro-technique) by Francesco Cirillo
+- [Expo](https://expo.dev/) for the amazing development platform
+- [React Native](https://reactnative.dev/) for cross-platform development
+- [@expo/vector-icons](https://icons.expo.fyi/) for beautiful icons
+
+## 📞 Support
+
+For support, email joyaldeveloper2001@gmail.com or create an issue in the GitHub repository.
+
+## 🔄 Changelog
+
+### Version 1.0.0
+- Initial release
+- Basic Pomodoro timer functionality
+- Dark/Light theme support
+- Customizable timer settings
+- Task tracking
+
+### Version 1.1.0 (Planned)
+- [ ] Statistics tracking
+- [ ] Sound notifications
+- [ ] Background timer support
+- [ ] Task history
+- [ ] Export statistics
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/PomodoroTimerApp&type=Date)](https://star-history.com/#yourusername/PomodoroTimerApp&Date)
+
+---
+
+Made with ❤️ by [Your Name] • [GitHub](https://github.com/yourusername) • [Twitter](https://twitter.com/yourusername)
+
+**Stay focused, stay productive!** 🍅
+
+---
+
+<div align="center">
+
+### Built with
+
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+### Support
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/yourusername)
+
+</div>
+
+## 📱 Download
+
+[![Download on Google Play](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.yourcompany.pomodorotimer)
+[![Download on App Store](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)](https://apps.apple.com/app/pomodoro-timer/idYOUR_APP_ID)
+
+*Links will be available after publishing to app stores*
+
+---
+
+**Happy Coding!** 👨‍💻👩‍💻
