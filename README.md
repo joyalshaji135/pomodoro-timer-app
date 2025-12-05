@@ -275,8 +275,7 @@ Made with ❤️ by [Your Name] • [GitHub](https://github.com/yourusername) �
 
 ## 📱 Download
 
-[![Download on Google Play](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.yourcompany.pomodorotimer)
-[![Download on App Store](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)](https://apps.apple.com/app/pomodoro-timer/idYOUR_APP_ID)
+[![Download on Google Play](https://expo.dev/accounts/joyaldev2001/projects/PomodoroTimer/builds/4411c9b8-fda5-476a-ad94-9affa560f6b5)
 
 *Links will be available after publishing to app stores*
 
