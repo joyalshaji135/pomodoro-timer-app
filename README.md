@@ -27,11 +27,11 @@ A beautiful and functional Pomodoro timer application built with React Native an
 - Theme preferences
 - Task-specific timers
 
-## 📱 Screenshots
+<!-- ## 📱 Screenshots
 
 | Splash Screen | Timer Screen | Settings |
 |--------------|--------------|----------|
-| ![Splash](https://via.placeholder.com/300x600/FF6B6B/FFFFFF?text=Pomodoro+Timer) | ![Timer](https://via.placeholder.com/300x600/4ECDC4/FFFFFF?text=Focus+Time) | ![Settings](https://via.placeholder.com/300x600/121212/FFFFFF?text=Settings) |
+| ![Splash](https://via.placeholder.com/300x600/FF6B6B/FFFFFF?text=Pomodoro+Timer) | ![Timer](https://via.placeholder.com/300x600/4ECDC4/FFFFFF?text=Focus+Time) | ![Settings](https://via.placeholder.com/300x600/121212/FFFFFF?text=Settings) | -->
 
 ## 🚀 Quick Start
 
@@ -253,7 +253,7 @@ For support, email joyaldeveloper2001@gmail.com or create an issue in the GitHub
 
 ---
 
-Made with ❤️ by [Your Name] • [GitHub](https://github.com/yourusername) • [Twitter](https://twitter.com/yourusername)
+Made with ❤️ by [Joyal Shaji] • [GitHub](https://github.com/joyalshaji135) • [Twitter](https://twitter.com/yourusername)
 
 **Stay focused, stay productive!** 🍅
 
