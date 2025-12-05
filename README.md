@@ -29,9 +29,26 @@ A beautiful and functional Pomodoro timer application built with React Native an
 
 ## 📱 Screenshots
 
-| Splash Screen | Timer Screen | Settings |
-|--------------|--------------|----------|
-| ![Splash](https://drive.google.com/uc?export=view&id=17rUuVxjfDC40Ns1btnrjh2Ao_LWCyFXI) | ![Timer1](https://drive.google.com/uc?export=view&id=1yVHdWaHZUsR4AXhUe4Bj8vOhzbx_o0qj) <br> ![Timer2](https://drive.google.com/uc?export=view&id=1ut0CeFFBxJSrvGhKsZMQka069kJIVab8) | ![Settings](https://drive.google.com/uc?export=view&id=13Ng6eoFpS7YVBlBatfqD8PiG3AbMuisA) |
+<table>
+  <tr>
+    <th>Splash Screen</th>
+    <th>Timer Screen</th>
+    <th>Settings</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://drive.google.com/uc?export=view&id=17rUuVxjfDC40Ns1btnrjh2Ao_LWCyFXI" width="200" />
+    </td>
+    <td>
+      <img src="https://drive.google.com/uc?export=view&id=1yVHdWaHZUsR4AXhUe4Bj8vOhzbx_o0qj" width="200" /><br/>
+      <img src="https://drive.google.com/uc?export=view&id=1ut0CeFFBxJSrvGhKsZMQka069kJIVab8" width="200" />
+    </td>
+    <td>
+      <img src="https://drive.google.com/uc?export=view&id=13Ng6eoFpS7YVBlBatfqD8PiG3AbMuisA" width="200" />
+    </td>
+  </tr>
+</table>
+
 
 ## 🚀 Quick Start
 
